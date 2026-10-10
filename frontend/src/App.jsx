@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { Shield } from 'lucide-react';
 import Navbar from './components/Navbar';
 // DemoController (Judges Storyboard) removed — not shown on CampusInsight AI dashboard
 import NodeDetailDrawer from './components/NodeDetailDrawer';
