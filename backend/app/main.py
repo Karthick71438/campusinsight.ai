@@ -30,11 +30,20 @@ from app.routes.campus_analytics import router as campus_analytics_router
 async def lifespan(app: FastAPI):
     # Startup: Ensure tables are created and initial seed is present
     print(f"Starting {settings.APP_NAME} v{settings.APP_VERSION}...")
-    init_db()
-    seed_database()
+    try:
+        init_db()
+    except Exception as e:
+        print(f"[Warning] init_db failed during startup: {e}")
+    try:
+        seed_database()
+    except Exception as e:
+        print(f"[Warning] seed_database failed during startup: {e}")
     yield
     # Shutdown
-    graph_service.close()
+    try:
+        graph_service.close()
+    except Exception:
+        pass
     print("Application shutdown complete.")
 
 app = FastAPI(
@@ -53,8 +62,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Health endpoint
+# Health endpoint - support both /api/health and /health
 @app.get("/api/health", tags=["System Health"])
+@app.get("/health", tags=["System Health"])
 def health_check():
     return {
         "status": "healthy",

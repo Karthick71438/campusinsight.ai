@@ -1,0 +1,72 @@
+[
+  {
+    "student_id": "CS2024-001",
+    "name": "Deepika",
+    "department": "Computer Science",
+    "year": 3,
+    "section": "A",
+    "subject": "Data Structures & Algorithms",
+    "semester": 5,
+    "attendance_percentage": 92.0,
+    "internal_marks": 84.0,
+    "assignment_score": 88.0,
+    "previous_performance": 8.9,
+    "engagement_score": 88.0
+  },
+  {
+    "student_id": "IT2024-002",
+    "name": "Kavya",
+    "department": "Information Technology",
+    "year": 2,
+    "section": "B",
+    "subject": "Web Technologies",
+    "semester": 3,
+    "attendance_percentage": 76.0,
+    "internal_marks": 62.0,
+    "assignment_score": 65.0,
+    "previous_performance": 7.1,
+    "engagement_score": 68.0
+  },
+  {
+    "student_id": "CS2024-003",
+    "name": "Santhosh",
+    "department": "Computer Science",
+    "year": 2,
+    "section": "A",
+    "subject": "Operating Systems",
+    "semester": 3,
+    "attendance_percentage": 63.0,
+    "internal_marks": 48.0,
+    "assignment_score": 52.0,
+    "previous_performance": 6.3,
+    "engagement_score": 50.0
+  },
+  {
+    "student_id": "IT2024-004",
+    "name": "Karthik",
+    "department": "Information Technology",
+    "year": 3,
+    "section": "A",
+    "subject": "Cloud Computing",
+    "semester": 5,
+    "attendance_percentage": 85.0,
+    "internal_marks": 71.0,
+    "assignment_score": 74.0,
+    "previous_performance": 7.8,
+    "engagement_score": 76.0
+  },
+  {
+    "student_id": "CS2024-005",
+    "name": "Mukesh",
+    "department": "Computer Science",
+    "year": 1,
+    "section": "B",
+    "subject": "Mathematics",
+    "semester": 1,
+    "attendance_percentage": 51.0,
+    "internal_marks": 38.0,
+    "assignment_score": 40.0,
+    "previous_performance": 5.4,
+    "engagement_score": 35.0
+  }
+]

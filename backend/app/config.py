@@ -92,18 +92,45 @@ if not settings.GOOGLE_CLIENT_ID:
 
 
 def get_db_url() -> str:
-    """Return Supabase Postgres URL if present, otherwise SQLite local file."""
+    """Return Supabase Postgres URL if present, otherwise SQLite file (using /tmp on Vercel)."""
     if settings.SUPABASE_DB_URL and settings.SUPABASE_DB_URL.strip():
         return settings.SUPABASE_DB_URL.strip()
+    
+    # On Vercel / serverless runtimes, root filesystem is read-only; use /tmp
+    if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
+        tmp_db = "/tmp/learngraph.db"
+        if not os.path.exists(tmp_db):
+            import shutil
+            for candidate in [
+                os.path.join(os.path.dirname(__file__), "..", "learngraph.db"),
+                os.path.join(os.path.dirname(__file__), "..", "..", "learngraph.db"),
+                "learngraph.db",
+            ]:
+                if os.path.exists(candidate) and os.path.getsize(candidate) > 0:
+                    try:
+                        shutil.copyfile(candidate, tmp_db)
+                        break
+                    except Exception:
+                        pass
+        return f"sqlite:///{tmp_db}"
+        
     return settings.DATABASE_URL
 
 def get_data_dir() -> str:
-    """Walk upwards to reliably locate the data directory containing seeded JSON fixtures."""
+    """Locate the data directory containing seeded JSON fixtures."""
+    # First check inside backend/data (bundled in deployment)
+    backend_data = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
+    if os.path.exists(os.path.join(backend_data, "concepts.json")):
+        return backend_data
+
+    # Walk upwards if running from elsewhere
     curr = os.path.abspath(os.path.dirname(__file__))
     for _ in range(5):
         candidate = os.path.join(curr, "data")
         if os.path.exists(os.path.join(candidate, "concepts.json")):
             return candidate
         curr = os.path.dirname(curr)
-    return os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "data"))
+        
+    return backend_data
+
 

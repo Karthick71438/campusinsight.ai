@@ -1,0 +1,121 @@
+{
+  "demo_students": [
+    {
+      "id": "student-demo-1",
+      "name": "Deepika",
+      "email": "deepika@campusinsight.edu",
+      "role": "Computer Science Undergraduate",
+      "demo_stages": {
+        "stage_1_initial": {
+          "label": "1. Initial Peak Mastery",
+          "description": "Deepika completed Recursion unit with high distinction (90%).",
+          "mastery": {
+            "concept-functions": { "score": 94.0, "stability": "Strong", "days_ago": 25, "last_practiced": "2026-08-30T10:00:00Z" },
+            "concept-arrays": { "score": 91.0, "stability": "Strong", "days_ago": 23, "last_practiced": "2026-09-01T14:30:00Z" },
+            "concept-recursion": { "score": 90.0, "stability": "Strong", "days_ago": 21, "last_practiced": "2026-09-03T16:00:00Z" },
+            "concept-trees": { "score": 0.0, "stability": "At Risk", "days_ago": null, "last_practiced": null },
+            "concept-graphs": { "score": 0.0, "stability": "At Risk", "days_ago": null, "last_practiced": null }
+          }
+        },
+        "stage_2_decay": {
+          "label": "2. 21-Day Gap (Recursion Decay)",
+          "description": "21 days elapse without practicing Recursion. Memory decay sets in; mastery drops to 55%.",
+          "mastery": {
+            "concept-functions": { "score": 92.0, "stability": "Strong", "days_ago": 4, "last_practiced": "2026-09-20T10:00:00Z" },
+            "concept-arrays": { "score": 88.0, "stability": "Strong", "days_ago": 3, "last_practiced": "2026-09-21T14:30:00Z" },
+            "concept-recursion": { "score": 55.0, "stability": "Weakening", "days_ago": 21, "last_practiced": "2026-09-03T16:00:00Z" },
+            "concept-trees": { "score": 0.0, "stability": "At Risk", "days_ago": null, "last_practiced": null },
+            "concept-graphs": { "score": 0.0, "stability": "At Risk", "days_ago": null, "last_practiced": null }
+          }
+        },
+        "stage_3_failed_trees": {
+          "label": "3. Tree Traversal Failure (Root Cause)",
+          "description": "Deepika attempts Tree Traversal quiz and scores 40%. The system flags Recursion prerequisite decay as root cause.",
+          "mastery": {
+            "concept-functions": { "score": 92.0, "stability": "Strong", "days_ago": 4, "last_practiced": "2026-09-20T10:00:00Z" },
+            "concept-arrays": { "score": 88.0, "stability": "Strong", "days_ago": 3, "last_practiced": "2026-09-21T14:30:00Z" },
+            "concept-recursion": { "score": 55.0, "stability": "Weakening", "days_ago": 21, "last_practiced": "2026-09-03T16:00:00Z" },
+            "concept-trees": { "score": 40.0, "stability": "At Risk", "days_ago": 1, "last_practiced": "2026-09-23T11:00:00Z" },
+            "concept-graphs": { "score": 0.0, "stability": "At Risk", "days_ago": null, "last_practiced": null }
+          }
+        },
+        "stage_4_revised": {
+          "label": "4. Targeted Revision Completed",
+          "description": "Deepika completes a 5-question targeted revision on Recursion. Mastery recovers to 88% and unblocks Tree Traversal.",
+          "mastery": {
+            "concept-functions": { "score": 92.0, "stability": "Strong", "days_ago": 4, "last_practiced": "2026-09-20T10:00:00Z" },
+            "concept-arrays": { "score": 88.0, "stability": "Strong", "days_ago": 3, "last_practiced": "2026-09-21T14:30:00Z" },
+            "concept-recursion": { "score": 88.0, "stability": "Strong", "days_ago": 0, "last_practiced": "2026-09-24T22:00:00Z" },
+            "concept-trees": { "score": 68.0, "stability": "Weakening", "days_ago": 0, "last_practiced": "2026-09-24T22:15:00Z" },
+            "concept-graphs": { "score": 0.0, "stability": "At Risk", "days_ago": null, "last_practiced": null }
+          }
+        }
+      },
+      "current_stage": "stage_3_failed_trees",
+      "history_samples": [
+        { "concept_id": "concept-recursion", "date": "2026-09-03", "mastery": 90.0, "event": "Quiz passed (5/5)" },
+        { "concept_id": "concept-recursion", "date": "2026-09-08", "mastery": 82.0, "event": "5-day decay signal" },
+        { "concept_id": "concept-recursion", "date": "2026-09-14", "mastery": 71.0, "event": "11-day decay signal" },
+        { "concept_id": "concept-recursion", "date": "2026-09-20", "mastery": 60.0, "event": "17-day decay signal" },
+        { "concept_id": "concept-recursion", "date": "2026-09-24", "mastery": 55.0, "event": "21-day decay (Weakening)" },
+        { "concept_id": "concept-trees", "date": "2026-09-23", "mastery": 40.0, "event": "Quiz attempted (2/5) - Prereq bottleneck" }
+      ]
+    },
+    {
+      "id": "student-demo-2",
+      "name": "Kavya",
+      "email": "kavya@campusinsight.edu",
+      "role": "Information Technology Undergraduate",
+      "current_stage": "default",
+      "mastery": {
+        "concept-functions": { "score": 78.0, "stability": "Stable", "days_ago": 5, "last_practiced": "2026-10-03T10:00:00Z" },
+        "concept-arrays": { "score": 72.0, "stability": "Stable", "days_ago": 6, "last_practiced": "2026-10-02T14:30:00Z" },
+        "concept-recursion": { "score": 65.0, "stability": "Weakening", "days_ago": 12, "last_practiced": "2026-09-26T16:00:00Z" },
+        "concept-trees": { "score": 58.0, "stability": "Weakening", "days_ago": 14, "last_practiced": "2026-09-24T11:00:00Z" },
+        "concept-graphs": { "score": 45.0, "stability": "At Risk", "days_ago": 18, "last_practiced": "2026-09-20T09:00:00Z" }
+      }
+    },
+    {
+      "id": "student-demo-3",
+      "name": "Santhosh",
+      "email": "santhosh@campusinsight.edu",
+      "role": "Computer Science Undergraduate",
+      "current_stage": "default",
+      "mastery": {
+        "concept-functions": { "score": 62.0, "stability": "Weakening", "days_ago": 14, "last_practiced": "2026-09-24T10:00:00Z" },
+        "concept-arrays": { "score": 55.0, "stability": "Weakening", "days_ago": 16, "last_practiced": "2026-09-22T14:30:00Z" },
+        "concept-recursion": { "score": 48.0, "stability": "At Risk", "days_ago": 20, "last_practiced": "2026-09-18T16:00:00Z" },
+        "concept-trees": { "score": 40.0, "stability": "At Risk", "days_ago": 22, "last_practiced": "2026-09-16T11:00:00Z" },
+        "concept-graphs": { "score": 30.0, "stability": "At Risk", "days_ago": 25, "last_practiced": "2026-09-13T09:00:00Z" }
+      }
+    },
+    {
+      "id": "student-demo-4",
+      "name": "Karthik",
+      "email": "karthik@campusinsight.edu",
+      "role": "Information Technology Undergraduate",
+      "current_stage": "default",
+      "mastery": {
+        "concept-functions": { "score": 88.0, "stability": "Strong", "days_ago": 3, "last_practiced": "2026-10-05T10:00:00Z" },
+        "concept-arrays": { "score": 82.0, "stability": "Strong", "days_ago": 4, "last_practiced": "2026-10-04T14:30:00Z" },
+        "concept-recursion": { "score": 75.0, "stability": "Stable", "days_ago": 6, "last_practiced": "2026-10-02T16:00:00Z" },
+        "concept-trees": { "score": 70.0, "stability": "Stable", "days_ago": 8, "last_practiced": "2026-09-30T11:00:00Z" },
+        "concept-graphs": { "score": 62.0, "stability": "Weakening", "days_ago": 10, "last_practiced": "2026-09-28T09:00:00Z" }
+      }
+    },
+    {
+      "id": "student-demo-5",
+      "name": "Mukesh",
+      "email": "mukesh@campusinsight.edu",
+      "role": "Computer Science Undergraduate",
+      "current_stage": "default",
+      "mastery": {
+        "concept-functions": { "score": 48.0, "stability": "At Risk", "days_ago": 22, "last_practiced": "2026-09-16T10:00:00Z" },
+        "concept-arrays": { "score": 40.0, "stability": "At Risk", "days_ago": 24, "last_practiced": "2026-09-14T14:30:00Z" },
+        "concept-recursion": { "score": 35.0, "stability": "At Risk", "days_ago": 28, "last_practiced": "2026-09-10T16:00:00Z" },
+        "concept-trees": { "score": 25.0, "stability": "At Risk", "days_ago": 30, "last_practiced": "2026-09-08T11:00:00Z" },
+        "concept-graphs": { "score": 15.0, "stability": "At Risk", "days_ago": 32, "last_practiced": "2026-09-06T09:00:00Z" }
+      }
+    }
+  ]
+}
